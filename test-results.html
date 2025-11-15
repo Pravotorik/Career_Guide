@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Career Profile - Career Guide</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Cormorant+Garamond:wght@400;600&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body class="results-page">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <span class="logo-icon">
+                        <img src="img/Logo.png" alt="Career Guide Logo" class="logo-image">
+                    </span>
+                    <span class="logo-text">Career Guide</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#jobs">Browse Jobs</a></li>
+                </ul>
+                <button class="cta-button-small" onclick="window.location.href='index.html#test'">Retake Test</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Results Hero -->
+    <section class="results-hero">
+        <div class="hero-background">
+            <!-- Частицы поверх изображения -->
+            <div class="particle" style="--delay: 0s; --x: 10%; --y: 20%"></div>
+            <div class="particle" style="--delay: 1s; --x: 80%; --y: 30%"></div>
+            <div class="particle" style="--delay: 2s; --x: 50%; --y: 60%"></div>
+            <div class="particle" style="--delay: 1.5s; --x: 20%; --y: 70%"></div>
+            <div class="particle" style="--delay: 0.5s; --x: 70%; --y: 80%"></div>
+        </div>
+        <div class="container">
+            <div class="results-header">
+                <div class="completion-badge">✓ Assessment Complete</div>
+                <h1 class="results-title">Your Personalized Career Profile</h1>
+                <p class="results-subtitle">Based on your responses, we've identified your personality type and career strengths</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Personality Type Section -->
+    <section class="personality-section">
+        <div class="container">
+            <div class="personality-card">
+                <div class="personality-icon" id="personality-icon"></div>
+                <h2 id="personality-type">The Investigator</h2>
+                <p class="personality-code" id="personality-code">RIASEC Type: Investigative</p>
+                <p class="personality-description" id="personality-description"></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strengths Section -->
+<section class="strengths-section">
+    <div class="container">
+        <h2 class="stat_section-title">Your Key Strengths</h2>
+        <div class="strengths-grid" id="strengths-grid">
+            <!-- Пример элемента с картинкой -->
+            <div class="strength-card">
+                <div class="strength-icon">
+                    <img src="img/analytical-thinking.png" alt="Analytical Thinking" class="strength-image">
+                </div>
+                <h3>Analytical Thinking</h3>
+                <p>You excel at breaking down complex problems and finding logical solutions.</p>
+            </div>
+            
+            <div class="strength-card">
+                <div class="strength-icon">
+                    <img src="img/creativity.png" alt="Creativity" class="strength-image">
+                </div>
+                <h3>Creativity</h3>
+                <p>You have a unique ability to generate innovative ideas and solutions.</p>
+            </div>
+            
+            <div class="strength-card">
+                <div class="strength-icon">
+                    <img src="img/leadership.png" alt="Leadership" class="strength-image">
+                </div>
+                <h3>Leadership</h3>
+                <p>You naturally inspire and guide others toward common goals.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Personality Breakdown -->
+    <section class="breakdown-section">
+        <div class="container">
+            <h2 class="stat_section-title">Your Personality Breakdown</h2>
+            <div class="breakdown-chart" id="breakdown-chart"></div>
+        </div>
+    </section>
+
+    <!-- Recommended Careers -->
+    <section class="recommended-careers-section">
+        <div class="container">
+            <h2 class="section-title">Recommended Career Paths</h2>
+            <div class="careers-grid" id="careers-grid"></div>
+        </div>
+    </section>
+
+    <!-- Matched Jobs Section -->
+    <section class="matched-jobs-section">
+        <div class="container">
+            <h2 class="section-title">Jobs Matched to Your Profile</h2>
+            <p class="section-subtitle">We've selected these positions based on your personality type and strengths</p>
+            <div id="matched-jobs-grid" class="jobs-grid"></div>
+            <button class="load-more-button" onclick="window.location.href='index.html#jobs'">View All Jobs</button>
+        </div>
+    </section>
+
+    <!-- Development Areas -->
+    <section class="development-section">
+        <div class="container">
+            <h2 class="section-title">Areas for Growth</h2>
+            <div class="development-grid" id="development-grid"></div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="final-cta-section">
+        <div class="cta-overlay"></div>
+        <div class="container">
+            <h2 class="cta-title">Ready to Apply to Your Dream Jobs?</h2>
+            <button class="cta-button" onclick="window.location.href='index.html#jobs'">
+                <span>EXPLORE ALL OPPORTUNITIES</span>
+                <span class="arrow">→</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <span class="logo-icon">
+                            <img src="img/Logo.png" alt="Career Guide Logo" class="logo-image">
+                        </span>
+                        <span class="logo-text">Career Guide</span>
+                    </div>
+                    <p class="footer-description">
+                        Helping thousands find their perfect career path through
+                        intelligent assessment and personalized guidance.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#how-it-works">How It Works</a></li>
+                        <li><a href="index.html#test">Take Test</a></li>
+                        <li><a href="index.html#jobs">Browse Jobs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Career Guide</a></li>
+                        <li><a href="#">Resume Tips</a></li>
+                        <li><a href="#">Interview Prep</a></li>
+                        <li><a href="#">Market Trends</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Career Guide. Victoryia Makarevich, Fiolenta Ostapchuk, Anastasiya Pravotorova, Maria Strelchonok.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="results.js"></script>
+</body>
+</html>
