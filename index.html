@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Profession Finder - Find Your Perfect Career</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Cormorant+Garamond:wght@400;600&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <span class="logo-icon">
+                        <img src="img/Logo.png" alt="Profession Finder Logo" class="logo-image">
+                    </span>
+                    <span class="logo-text">Career Guide</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#test">Take Test</a></li>
+                    <li><a href="#jobs">Jobs</a></li>
+                    <li><a href="#stats">Statistics</a></li>
+                </ul>
+                <button class="cta-button-small" onclick="scrollToTest()">
+                    Start Now
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-background">
+            <!-- Частицы поверх изображения -->
+            <div class="particle" style="--delay: 0s; --x: 10%; --y: 20%"></div>
+            <div class="particle" style="--delay: 1s; --x: 80%; --y: 30%"></div>
+            <div class="particle" style="--delay: 2s; --x: 50%; --y: 60%"></div>
+            <div class="particle" style="--delay: 1.5s; --x: 20%; --y: 70%"></div>
+            <div class="particle" style="--delay: 0.5s; --x: 70%; --y: 80%"></div>
+        </div>
+
+        <!-- Текст "Career Guide" -->
+        <div class="container hero-container">
+            <div class="hero-content">
+                <p class="hero-subtitle">
+                    Professional assessment, market analysis, and personalized
+                    recommendations - all in one place.
+                </p>
+                <button class="cta-button" onclick="scrollToTest()">
+                    <span>TAKE THE TEST & FIND YOURSELF</span>
+                    <span class="arrow">→</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works-section">
+        <div class="container">
+            <h2 class="section-title">Just 3 Steps to Your Dream Career</h2>
+            <div class="steps-container">
+                <div class="step-card">
+                    <div class="step-icon">
+                        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="50" cy="30" r="15" stroke="currentColor" stroke-width="3" />
+                            <path d="M30 55 Q30 45 40 45 L60 45 Q70 45 70 55 L70 75 Q70 85 60 85 L40 85 Q30 85 30 75 Z"
+                                stroke="currentColor" stroke-width="3" fill="none" />
+                            <line x1="40" y1="60" x2="60" y2="60" stroke="currentColor" stroke-width="3" />
+                            <line x1="40" y1="70" x2="60" y2="70" stroke="currentColor" stroke-width="3" />
+                        </svg>
+                    </div>
+                    <h3>Take the Test</h3>
+
+                    <p>
+                        Complete our interactive assessment based on your interests,
+                        skills, and preferences
+                    </p>
+                    <div class="step-number">01</div>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step-card">
+                    <div class="step-icon">
+                        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="20" y="30" width="60" height="50" rx="5" stroke="currentColor" stroke-width="3" />
+                            <path d="M30 55 L40 65 L50 45 L60 60 L70 50" stroke="currentColor" stroke-width="3"
+                                fill="none" />
+                            <line x1="20" y1="40" x2="80" y2="40" stroke="currentColor" stroke-width="2" />
+                        </svg>
+                    </div>
+                    <h3>Get Analysis</h3>
+                    <p>
+                        Receive a detailed analysis of your personality profile and career
+                        strengths
+                    </p>
+                    <div class="step-number">02</div>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step-card">
+                    <div class="step-icon">
+                        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M50 20 L60 40 L80 40 L65 55 L70 75 L50 62 L30 75 L35 55 L20 40 L40 40 Z"
+                                stroke="currentColor" stroke-width="3" fill="none" />
+                        </svg>
+                    </div>
+                    <h3>Discover Opportunities</h3>
+                    <p>
+                        Explore a personalized selection of jobs, industries, and opportunities perfectly matched to
+                        your profile
+                    </p>
+                    <div class="step-number">03</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Test Section -->
+    <section id="test" class="test-section">
+        <div class="container">
+            <h2 class="section-title">Who Are You in the World of Careers?</h2>
+            <p class="section-subtitle">
+                Answer 15 questions about your interests, skills, and preferences.
+                We'll identify your personality type and suggest the best-fit
+                professions.
+            </p>
+
+            <div id="test-container" class="test-container">
+                <div class="progress-bar-container">
+                    <div class="progress-bar" id="progress-bar"></div>
+                    <span class="progress-text" id="progress-text">Question 1 of 15</span>
+                </div>
+
+                <div class="question-card" id="question-card">
+                    <h3 class="question-text" id="question-text"></h3>
+                    <div class="options-container" id="options-container"></div>
+                </div>
+
+                <div class="test-navigation">
+                    <button class="nav-button" id="prev-button" onclick="previousQuestion()" disabled>
+                        ← Previous
+                    </button>
+                    <button class="nav-button primary" id="next-button" onclick="nextQuestion()" disabled>
+                        Next →
+                    </button>
+                </div>
+            </div>
+
+            <div id="test-complete" class="test-complete" style="display: none">
+                <div class="completion-icon">✓</div>
+                <h3>Test Complete!</h3>
+                <p>
+                    Analyzing your responses and preparing your personalized career
+                    profile...
+                </p>
+                <button class="cta-button" onclick="viewResults()">
+                    View My Results
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section id="stats" class="stats-section">
+        <div class="container">
+            <h2 class="stat_section-title">
+                Profession Finder in Numbers: We Know the Market
+            </h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number" data-target="500">0</div>
+                    <div class="stat-label">Partner Employers</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-target="10000">0</div>
+                    <div class="stat-label">Active Job Openings</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-target="85">0</div>
+                    <div class="stat-label">Percentage of Success Rate (3 months)</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <img src="https://img.icons8.com/?size=100&id=21449&format=png&color=000000" alt="Salary"
+                            class="stat-icon-img">
+                    </div>
+                    <div class="salary-info">
+                        <div class="stat-label">Average Salaries</div>
+                        <div class="salary-item">IT: <span class="salary-amount">10 000 Br</span></div>
+                        <div class="salary-item">Marketing: <span class="salary-amount">3 000 Br</span></div>
+                        <div class="salary-item">Design: <span class="salary-amount">4 000 Br</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Job Catalog Section -->
+    <section id="jobs" class="jobs-section">
+        <div class="container">
+            <h2 class="section-title">Hot Jobs For You</h2>
+
+            <div class="job-filters">
+                <select id="category-filter" class="filter-select" onchange="filterJobs()">
+                    <option value="all">All Categories</option>
+                    <option value="IT">IT & Technology</option>
+                    <option value="Design">Design</option>
+                    <option value="Marketing">Marketing</option>
+                    <option value="Business">Business</option>
+                    <option value="Healthcare">Healthcare</option>
+                </select>
+
+                <select id="location-filter" class="filter-select" onchange="filterJobs()">
+                    <option value="all">All Locations</option>
+                    <option value="Remote">Remote</option>
+                    <option value="Minsk">Minsk</option>
+                    <option value="Mogilev">Mogilev</option>
+                    <option value="Vitebsk">Vitebsk</option>
+                    <option value="Brest">Brest</option>
+                </select>
+
+                <select id="experience-filter" class="filter-select" onchange="filterJobs()">
+                    <option value="all">All Experience Levels</option>
+                    <option value="Entry">Entry Level</option>
+                    <option value="Mid">Mid Level (1-3 years)</option>
+                    <option value="Senior">Senior (3+ years)</option>
+                </select>
+            </div>
+
+            <div id="jobs-grid" class="jobs-grid"></div>
+
+            <button class="load-more-button" onclick="loadMoreJobs()">
+                Load More Jobs
+            </button>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta-section">
+        <div class="cta-overlay"></div>
+        <div class="container">
+            <h2 class="cta-title">
+                Your Career Is Waiting. Take The First Step Today.
+            </h2>
+            <button class="cta-button" onclick="scrollToTest()">
+                <span>START YOUR CAREER JOURNEY</span>
+                <span class="arrow">→</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <span class="logo-icon">
+                            <img src="img/Logo.png" alt="Profession Finder Logo" class="logo-image">
+                        </span>
+                        <span class="logo-text">Profession Finder</span>
+                    </div>
+                    <p class="footer-description">
+                        Helping thousands find their perfect career path through
+                        intelligent assessment and personalized guidance.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#test">Take Test</a></li>
+                        <li><a href="#jobs">Browse Jobs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://80000hours.org/career-guide/">Career Guide</a></li>
+                        <li><a href="https://www.mycvcreator.com/blog/resume-tips-how-to-write-a-great-resume?gad_source=1&gad_campaignid=23197468028&gbraid=0AAAABBDGGA7JEYMFiNLlCc8pxyjzgL_cW&gclid=CjwKCAiA24XJBhBXEiwAXElO36qqyWt6gEd6-cI29vr53-rZYASwAlClOcOZDK1jd873zqQnPUnCihoCLT8QAvD_BwE">Resume Tips</a></li>
+                        <li><a href="https://interviewprep.org/">Interview Prep</a></li>
+                        <li><a href="https://capital.com/en-int/learn/glossary/market-trend-definition">Market Trends</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://www.linkedin.com/feed/">LinkedIn</a></li>
+                        <li><a href="#">Telegram</a></li>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Career Guide. Victoryia Makarevich, Fiolenta Ostapchuk, Anastasiya Pravotorova, Maria Strelchonok.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
